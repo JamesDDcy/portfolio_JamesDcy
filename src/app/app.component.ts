@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterOutlet, RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { AboutComponent } from './about/about/about.component';
@@ -10,7 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppComponent {
   title = 'portfolio';
