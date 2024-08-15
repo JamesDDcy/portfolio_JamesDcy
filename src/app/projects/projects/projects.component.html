@@ -19,13 +19,14 @@
             slides-per-view="auto" coverflow-effect-rotate="25" coverflow-effect-stretch="0"
             coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop="true"
             navigation="true">
-            <swiper-slide *ngFor="let project of projects" class="w-2/3 md:w-1/4 h-2/3 md:h-1/4" (click)="openModal()">
+            <swiper-slide *ngFor="let project of projects" class="w-2/3 md:w-1/4 h-2/3 md:h-1/4"
+                (click)="openModal(project.title)">
                 <div class="relative">
                     <img [src]="project.image" class="slide-image relative z-0" />
                     <div
                         class="absolute top-0 left-0 w-full flex flex-col items-center lg:items-start justify-center cursor-pointer">
-                        <div
-                            [ngClass]="[project.textColor, project.hoverColor, 'relative', 'z-10','font-bold', 'text-xl', 'tracking-wider', 'lg:px-8', 'pt-9', 'transition', 'duration-500']">
+                        <div [ngClass]="[project.textColor, project.hoverColor]"
+                            class="relative z-10 font-bold text-xl tracking-wider lg:px-8 pt-9 transition duration-500">
                             {{ project.title }}
                         </div>
                         <div
