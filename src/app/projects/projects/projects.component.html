@@ -1,4 +1,4 @@
-<body class="bg-neutral-950">
+<div class="container max-w-full ">
     <div class="flex flex-col items-center">
         <div class="flex flex-col pb-2 items-center">
             <div class="mt-20">
@@ -15,33 +15,39 @@
             </div>
         </div>
 
-        <swiper-container class="mySwiper mt-5 pt-8" pagination="true" effect="coverflow" centered-slides="true"
+        <swiper-container class="mySwiper mt-5 pt-8 z-0" pagination="true" effect="coverflow" centered-slides="true"
             slides-per-view="auto" coverflow-effect-rotate="25" coverflow-effect-stretch="0"
             coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true" loop="true"
             navigation="true">
-            <swiper-slide class="w-2/3 md:w-1/4 h-2/3 md:h-1/4">
-                <img src=" https://swiperjs.com/demos/images/nature-1.jpg" />
-            </swiper-slide>
-            <swiper-slide class="w-2/3 md:w-1/4 h-2/3 md:h-1/4">
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </swiper-slide>
-            <swiper-slide class="w-2/3 md:w-1/4 h-2/3 md:h-1/4">
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </swiper-slide>
-            <swiper-slide class="w-2/3 md:w-1/4 h-2/3 md:h-1/4">
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </swiper-slide>
-            <swiper-slide class="w-2/3 md:w-1/4 h-2/3 md:h-1/4">
-                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-            </swiper-slide>
-            <swiper-slide class="w-2/3 md:w-1/4 h-2/3 md:h-1/4">
-                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+            <swiper-slide *ngFor="let project of projects" class="w-2/3 md:w-1/4 h-2/3 md:h-1/4" (click)="openModal()">
+                <div class="relative">
+                    <img [src]="project.image" class="slide-image relative z-0" />
+                    <div
+                        class="absolute top-0 left-0 w-full flex flex-col items-center lg:items-start justify-center cursor-pointer">
+                        <div [ngClass]="[project.textColor, project.hoverColor]"
+                            class="relative z-10 font-bold text-xl tracking-wider lg:px-8 pt-9 transition duration-500">
+                            {{ project.title }}
+                        </div>
+                        <div
+                            class="relative z-10 text-white font-light text-xs pt-2 px-2 md:px-8 text-center lg:text-start">
+                            {{ project.tools }}
+                        </div>
+                        <div class="relative z-10 text-white text-xs text-justify pt-7 px-8 hidden xl:block">
+                            {{ project.description }}</div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0 lg:right-0 lg:left-auto z-10 py-8 lg:p-8 text-white font-light text-xs text-center cursor-pointer">
+                        {{ project.year }}
+                    </div>
+                </div>
             </swiper-slide>
 
         </swiper-container>
 
+        <app-swiper-modal class="z-10">
 
-
+        </app-swiper-modal>
 
     </div>
-</body>
+</div>

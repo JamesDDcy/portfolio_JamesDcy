@@ -1,0 +1,13 @@
+<div class="container mx-auto p-4">
+  <div [ngClass]="isModalOpen ? 'block' : 'hidden' "
+    class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center ">
+    <div class="bg-white  p-8 rounded-lg shadow-lg w-2/3 h-2/3 relative">
+      <h2 class="text-2xl text-black">Test</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ducimus dignissimos omnis optio, accusamus
+        tempore, maxime molestiae hic, assumenda eius praesentium ipsam autem laborum libero adipisci saepe quidem ab?
+        Fugiat!</p>
+      <button class="absolute top-2 right-2 text-black" (click)="closeModal()">close</button>
+    </div>
+
+  </div>
+</div>

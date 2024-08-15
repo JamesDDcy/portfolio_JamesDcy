@@ -15,3 +15,16 @@ swiper-slide {
     display: block;
     width: 100%;
 } */
+
+.slide-image {
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide-active .slide-image {
+    cursor: pointer;
+}
+
+.swiper-slide-active .slide-image:hover {
+    transform: scale(1.1);
+}
