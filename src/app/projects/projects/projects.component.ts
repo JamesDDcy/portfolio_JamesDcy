@@ -73,7 +73,11 @@ export class ProjectsComponent {
     }
   ];
 
-  openModal(): void {
-    this.swiperModal.openModal();
+  openModal(projectTitle: string): void {
+    this.swiperModal.openModal(projectTitle);
+  }
+
+  closeModal(): void {
+    this.swiperModal.closeModal();
   }
 }
