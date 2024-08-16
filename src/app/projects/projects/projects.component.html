@@ -16,36 +16,35 @@
         </div>
 
         <!-- For loop works but contains bug -->
-        <swiper-container class="mySwiper mt-5 pt-8 z-0" pagination="true" effect="coverflow" centered-slides="true"
-            slides-per-view="auto" coverflow-effect-rotate="25" coverflow-effect-stretch="0" rewind="true"
-            coverflow-effect-depth="100" coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true"
-            navigation="true">
-            <ng-container>
-                <swiper-slide *ngFor="let project of projects" class="w-2/3 md:w-1/4 h-2/3 md:h-1/4"
-                    (click)="openModal(project.title)">
-                    <div class="relative">
-                        <img [src]="project.image" class="slide-image relative z-0" />
-                        <div
-                            class="absolute top-0 left-0 w-full flex flex-col items-center lg:items-start justify-center cursor-pointer">
-                            <div class="relative z-10 font-bold text-xl tracking-wider lg:px-8 pt-9 transition duration-500"
-                                [ngClass]="project.textColor">
-                                {{ project.title }}
-                            </div>
-                            <div
-                                class="relative z-10 text-white font-light text-xs pt-2 px-2 md:px-8 text-center lg:text-start">
-                                {{ project.tools }}
-                            </div>
-                            <div class="relative z-10 text-white text-xs text-justify pt-7 px-8 hidden xl:block">
-                                {{ project.description }}
-                            </div>
+        <swiper-container class="mySwiper mt-5 pt-8 z-0" pagination="true" pagination-clickable="true"
+            effect="coverflow" centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="25"
+            coverflow-effect-stretch="0" rewind="true" coverflow-effect-depth="100" coverflow-effect-modifier="1"
+            coverflow-effect-slide-shadows="true" navigation="true">
+
+            <swiper-slide *ngFor="let project of projects" class="w-2/3 md:w-1/4 h-2/3 md:h-1/4"
+                (click)="openModal(project.title)">
+                <div class="relative">
+                    <img [src]="project.image" class="slide-image relative z-0" />
+                    <div
+                        class="absolute top-0 left-0 w-full flex flex-col items-center lg:items-start justify-center cursor-pointer">
+                        <div class="relative z-10 font-bold text-xl tracking-wider lg:px-8 pt-9 transition duration-500"
+                            [ngClass]="project.textColor">
+                            {{ project.title }}
                         </div>
                         <div
-                            class="absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0 lg:right-0 lg:left-auto z-10 py-8 lg:p-8 text-white font-light text-xs text-center cursor-pointer">
-                            {{ project.year }}
+                            class="relative z-10 text-white font-light text-xs pt-2 px-2 md:px-8 text-center lg:text-start">
+                            {{ project.tools }}
+                        </div>
+                        <div class="relative z-10 text-white text-xs text-justify pt-7 px-8 hidden xl:block">
+                            {{ project.description }}
                         </div>
                     </div>
-                </swiper-slide>
-            </ng-container>
+                    <div
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0 lg:right-0 lg:left-auto z-10 py-8 lg:p-8 text-white font-light text-xs text-center cursor-pointer">
+                        {{ project.year }}
+                    </div>
+                </div>
+            </swiper-slide>
 
         </swiper-container>
 
