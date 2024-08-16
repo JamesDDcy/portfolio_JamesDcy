@@ -28,3 +28,54 @@ swiper-slide {
 .swiper-slide-active .slide-image:hover {
     transform: scale(1.1);
 }
+
+/* Swiper Title colors */
+.text-green {
+    color: rgb(74 222 128);
+    /* Tailwind's green-400 color */
+}
+
+.text-green:hover {
+    color: rgb(22 163 74);
+    /* Tailwind's green-600 color */
+}
+
+.text-cyan {
+    color: rgb(34 211 238);
+    /* Tailwind's cyan-400 color */
+}
+
+.text-cyan:hover {
+    color: rgb(8 145 178);
+    /* Tailwind's cyan-600 color */
+}
+
+.text-red {
+    color: rgb(248 113 113);
+    /* Tailwind's red-400 color */
+}
+
+.text-red:hover {
+    color: rgb(220 38 38);
+    /* Tailwind's red-600 color */
+}
+
+.text-amber {
+    color: rgb(251 191 36);
+    /* Tailwind's amber-400 color */
+}
+
+.text-amber:hover {
+    color: rgb(217 119 6);
+    /* Tailwind's amber-600 color */
+}
+
+.text-fuchsia {
+    color: rgb(232 121 249);
+    /* Tailwind's fuchsia-400 color */
+}
+
+.text-fuchsia:hover {
+    color: rgb(192 38 211);
+    /* Tailwind's fuchsia-600 color */
+}

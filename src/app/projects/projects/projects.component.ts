@@ -9,7 +9,6 @@ interface Project {
   year: string;
   image: string;
   textColor: string;
-  hoverColor: string;
 }
 
 @Component({
@@ -32,8 +31,7 @@ export class ProjectsComponent {
       description: 'A Smart Greenhouse Enclosure System IoT project that uses Vercel and TailwindCSS for the web application, Arduino IDE for backend, and Firebase as the database system.',
       year: '2024',
       image: 'assets/images/superPot.png',
-      textColor: 'text-green-400',
-      hoverColor: 'hover:text-green-600'
+      textColor: 'text-green',
     },
     {
       title: 'ISKO-INFO',
@@ -41,8 +39,7 @@ export class ProjectsComponent {
       description: 'A full-stack web application designed to assist UP Diliman students in the registration process. It utilizes Ruby on Rails for both the front-end and back-end, while employing Firebase as the database system.',
       year: '2023-2024',
       image: 'assets/images/iskoInfo.png',
-      textColor: 'text-red-400',
-      hoverColor: 'hover:text-red-600'
+      textColor: 'text-red',
     },
     {
       title: 'GENRE PREDICTOR',
@@ -50,8 +47,7 @@ export class ProjectsComponent {
       description: 'A machine learning project which utilizes a BERT NLP model to classify movies into genres based on a short text description.',
       year: '2024',
       image: 'assets/images/movieGenrePredictor.png',
-      textColor: 'text-cyan-400',
-      hoverColor: 'hover:text-cyan-600'
+      textColor: 'text-cyan',
     },
     {
       title: 'DATA SCIENCE',
@@ -59,8 +55,7 @@ export class ProjectsComponent {
       description: 'A Data Science project that employed Python for NLP to analyze Twitter data relating to the mis/disinformation about Cory Aquino`s presidency and the EDSA revolution in the context of the 2022 elections.',
       year: '2023',
       image: 'assets/images/dataScience.png',
-      textColor: 'text-amber-400',
-      hoverColor: 'hover:text-amber-600'
+      textColor: 'text-amber',
     },
     {
       title: 'BALL TOSS',
@@ -68,8 +63,7 @@ export class ProjectsComponent {
       description: 'A simple UI game developed using Pyret, a functional programming language.',
       year: '2021',
       image: 'assets/images/ballToss.png',
-      textColor: 'text-fuchsia-400',
-      hoverColor: 'hover:text-fuchsia-600'
+      textColor: 'text-fuchsia',
     },
     {
       title: 'TEST',
@@ -77,8 +71,7 @@ export class ProjectsComponent {
       description: 'TEST 123',
       year: '2021',
       image: 'assets/images/ballToss.png',
-      textColor: 'text-fuchsia-400',
-      hoverColor: 'hover:text-fuchsia-600'
+      textColor: 'text-fuchsia',
     }
   ];
 
