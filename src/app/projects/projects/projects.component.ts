@@ -70,6 +70,15 @@ export class ProjectsComponent {
       image: 'assets/images/ballToss.png',
       textColor: 'text-fuchsia-400',
       hoverColor: 'hover:text-fuchsia-600'
+    },
+    {
+      title: 'BALL TOSS',
+      tools: 'Pyret',
+      description: 'A simple UI game developed using Pyret, a functional programming language.',
+      year: '2021',
+      image: 'assets/images/ballToss.png',
+      textColor: 'text-fuchsia-400',
+      hoverColor: 'hover:text-fuchsia-600'
     }
   ];
 
