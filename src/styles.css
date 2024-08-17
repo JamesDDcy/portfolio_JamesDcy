@@ -8,3 +8,17 @@
 body {
     background-color: #171717;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, rgb(8 145 178));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, rgb(13, 175, 216));
+    border-radius: 10px;
+}
