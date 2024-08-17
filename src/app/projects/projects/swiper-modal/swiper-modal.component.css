@@ -1,12 +1,19 @@
-/* styles.css or swiper-modal.component.css */
 .modal-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.modal-bgv2 {
     background: linear-gradient(180deg, rgba(122, 144, 180, 0.3) 0%, rgba(220, 220, 220, 0) 100%);
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.337), 0 6px 20px rgba(0, 0, 0, 0.293);
+}
+
+.iskoInfo-swiper2 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.iskoInfo-swiper2 swiper-slide {
+    opacity: 0.4;
+}
+
+.iskoInfo-swiper2 .swiper-slide-thumb-active {
+    opacity: 1;
 }
