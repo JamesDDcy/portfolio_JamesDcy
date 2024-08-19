@@ -52,9 +52,6 @@
       </ng-container>
 
       <ng-container *ngIf="selectedProjectTitle === 'ISKO-INFO'">
-        <!-- <div class="grid lg:grid-cols-2 lg:gap-6">
-          
-        </div> -->
         <div>
           <h2 class="text-2xl text-red-400 font-bold pb-2">ISKO-INFO</h2>
           <p class=" text-justify">IskoInfo is a comprehensive online platform designed to enhance the academic
@@ -64,9 +61,9 @@
             the university community, making it an essential tool for students navigating their academic journey.</p>
         </div>
         <div class="h-auto w-full">
-          <swiper-container class="w-full h-full mt-3 pt-2 rounded-lg shadow-xl" thumbs-swiper=".iskoInfo-swiper2"
-            loop="true" space-between="10" autoplay-delay="2500" autoplay-disable-on-interaction="false"
-            navigation="true">
+          <swiper-container class="w-full h-full mt-3 pt-2 rounded-lg shadow-xl hidden lg:block"
+            thumbs-swiper=".iskoInfo-swiper2" loop="true" space-between="10" autoplay-delay="2500"
+            autoplay-disable-on-interaction="false" navigation="true">
             <swiper-slide>
               <img src="assets/images/iskoInfo/ii-1.png" class="rounded-lg" />
             </swiper-slide>
@@ -90,8 +87,8 @@
             </swiper-slide>
           </swiper-container>
 
-          <swiper-container class="iskoInfo-swiper2 w-full h-full rounded-lg shadow-xl" loop="true" space-between="10"
-            slides-per-view="4" free-mode="true" watch-slides-progress="true">
+          <swiper-container class="iskoInfo-swiper2 w-full h-full rounded-lg shadow-xl hidden lg:block" loop="true"
+            space-between="10" slides-per-view="4" free-mode="true" watch-slides-progress="true">
             <swiper-slide>
               <img src="assets/images/iskoInfo/ii-1.png" class="rounded-lg" />
             </swiper-slide>
@@ -120,12 +117,71 @@
       </ng-container>
 
       <ng-container *ngIf="selectedProjectTitle === 'GENRE PREDICTOR'">
-        <h2 class="text-2xl">GENRE PREDICTOR</h2>
-        <p class="font-medium">Python</p>
-        <p class="mt-4">A machine learning project using BERT NLP...</p>
+        <h2 class="text-2xl text-cyan-400 font-bold pb-2">GENRE PREDICTOR</h2>
+        <p class="text-justify">The project aims to predict multiple genres for movies based on their overviews. Using a
+          dataset of over 9,000 movie descriptions from Kaggle, the team fine-tuned the DistilBERT model for multi-label
+          classification. The model achieved an accuracy of 95.79%, with room for improvement in handling imbalanced
+          genres and further fine-tuning​</p>
+        <div class="flex justify-center items-center mt-4 pt-4">
+          <a href="assets/documents/GenrePredictor-documentation.pdf" target="_blank"
+            class="bg-blue-500 hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 m-2 rounded-full">
+            View Documentation
+          </a>
+        </div>
       </ng-container>
 
-      <!-- Add more ng-containers for additional projects -->
+      <ng-container *ngIf="selectedProjectTitle === 'DATA SCIENCE'">
+        <div class="grid lg:grid-cols-2 lg:gap-6">
+          <div>
+            <h2 class="text-2xl text-cyan-400 font-bold pb-2">DATA SCIENCE</h2>
+            <p class="text-justify">This project analyzes misinformation about Cory Aquino's presidency and the EDSA
+              Revolution during the 2022 Philippine elections. The team collected 150 tweets (2016-2022), used LDA topic
+              modeling to identify false claims, and conducted statistical analysis. The findings suggests that there
+              was no significant difference in topic distributions across election periods, suggesting no organized
+              misinformation campaign.​</p>
+            <div class="flex justify-center items-center mt-4 pt-4">
+              <a href="assets/images/dataScience/DataScience-poster.png" target="_blank"
+                class="bg-blue-500 hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 m-2 rounded-full">
+                View Poster
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center items-center">
+            <swiper-container class="h-min w-5/6 mx-5 rounded-lg shadow-xl hidden lg:block" space-between="30"
+              centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+              <swiper-slide>
+                <img src="assets/images/dataScience/ds-1.png" alt="Slide 1" class="w-auto h-auto rounded-lg">
+              </swiper-slide>
+              <swiper-slide>
+                <img src="assets/images/dataScience/ds-2.png" alt="Slide 2" class="w-auto h-auto rounded-lg">
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </div>
+
+      </ng-container>
+
+      <ng-container *ngIf="selectedProjectTitle === 'BALL TOSS'">
+        <div class="grid lg:grid-cols-2 lg:gap-6">
+          <div>
+            <h2 class="text-2xl text-fuchsia-400 font-bold pb-2">BALL TOSS</h2>
+            <p class="text-justify">Ball Toss is an engaging, physics-inspired game developed using Pyret, a functional
+              programming language designed for education and beginner programmers. This project serves as an excellent
+              introduction to game development concepts using functional programming. ​</p>
+            <div class="flex justify-center items-center w-full mt-4 pt-4 hidden lg:flex">
+              <img src="assets/images/ballToss/pyret-banner.png" alt="Pyret Banner">
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center w-full h-full mt-3 pt-2 rounded-lg hidden lg:flex">
+            <video class="rounded-lg shadow-xl" autoplay loop>
+              <source src="assets/videos/BallToss-video.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+
+      </ng-container>
 
       <div class="absolute top-2 right-2 cursor-pointer m-4 p-1" (click)="closeModal()">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="w-6 h-6" fill="white">
