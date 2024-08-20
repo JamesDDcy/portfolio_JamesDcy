@@ -64,14 +64,6 @@ export class ProjectsComponent {
       year: '2021',
       image: 'assets/images/ballToss.png',
       textColor: 'text-fuchsia',
-    },
-    {
-      title: 'TEST',
-      tools: 'Pyret',
-      description: 'TEST 123',
-      year: '2021',
-      image: 'assets/images/ballToss.png',
-      textColor: 'text-fuchsia',
     }
   ];
 
