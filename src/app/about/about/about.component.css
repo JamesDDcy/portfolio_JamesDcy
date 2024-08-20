@@ -1,0 +1,6 @@
+.about-me-img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.337), 0 6px 20px rgba(0, 0, 0, 0.293);
+    border-radius: 0 0 50px 0;
+    /* Only round the lower right corner */
+
+}

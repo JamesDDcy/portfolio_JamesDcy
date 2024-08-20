@@ -1,4 +1,4 @@
-<div class="container max-w-full ">
+<div class="container max-w-full font-body">
     <div class="flex flex-col items-center">
         <div class="flex flex-col pb-2 items-center">
             <div class="mt-20">
@@ -19,7 +19,7 @@
         <swiper-container class="mySwiper mt-5 pt-8 z-0" pagination="true" pagination-clickable="true"
             effect="coverflow" centered-slides="true" slides-per-view="auto" coverflow-effect-rotate="25"
             coverflow-effect-stretch="0" rewind="true" coverflow-effect-depth="100" coverflow-effect-modifier="1"
-            coverflow-effect-slide-shadows="true" navigation="true">
+            coverflow-effect-slide-shadows="true" navigation="true" mousewheel="true">
 
             <swiper-slide *ngFor="let project of projects" class="w-2/3 md:w-1/4 h-2/3 md:h-1/4"
                 (click)="openModal(project.title)">
