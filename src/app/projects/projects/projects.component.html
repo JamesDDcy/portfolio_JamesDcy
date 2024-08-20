@@ -5,7 +5,7 @@
                 <p class="font-black text-sm md:text-2xl text-blue-500">PROJECTS OVERVIEW</p>
             </div>
             <div class="flex items-center md:w-2/4 px-8">
-                <p class="text-white text-xs text-center">Explore my diverse projects, showcasing my skills and growth
+                <p class="text-xs text-center">Explore my diverse projects, showcasing my skills and growth
                     across
                     various
                     areas. Each
@@ -31,16 +31,15 @@
                             [ngClass]="project.textColor">
                             {{ project.title }}
                         </div>
-                        <div
-                            class="relative z-10 text-white font-light text-xs pt-2 px-2 md:px-8 text-center lg:text-start">
+                        <div class="relative z-10 font-light text-xs pt-2 px-2 md:px-8 text-center lg:text-start">
                             {{ project.tools }}
                         </div>
-                        <div class="relative z-10 text-white text-xs text-justify pt-7 px-8 hidden xl:block">
+                        <div class="relative z-10 text-xs text-justify pt-7 px-8 hidden xl:block">
                             {{ project.description }}
                         </div>
                     </div>
                     <div
-                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0 lg:right-0 lg:left-auto z-10 py-8 lg:p-8 text-white font-light text-xs text-center cursor-pointer">
+                        class="absolute bottom-0 left-1/2 transform -translate-x-1/2 lg:-translate-x-0 lg:right-0 lg:left-auto z-10 py-8 lg:p-8 font-light text-xs text-center cursor-pointer">
                         {{ project.year }}
                     </div>
                 </div>
