@@ -1,4 +1,4 @@
-<nav class="grid grid-cols-3 gap-4 items-center pt-7 pb-4 px-8 w-full z-50 fixed">
+<nav id="navbar" class="grid grid-cols-3 gap-4 items-center py-4 px-8 w-full z-50 fixed backdrop-blur-sm">
   <div class="flex justify-start">
     <a class=" text-xs ps-4 py-4 font-body  hover:text-blue-500 transition duration-300" routerLink="/"
       routerLinkActive="active">HOME</a>
@@ -17,3 +17,14 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('backdrop-blur');
+    } else {
+      navbar.classList.remove('backdrop-blur');
+    }
+  });
+</script>
