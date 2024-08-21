@@ -4,3 +4,27 @@
     /* Only round the lower right corner */
 
 }
+
+.cv-link {
+    font-weight: 500;
+    /* Equivalent to font-medium */
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.cv-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.5s;
+    margin-top: 4px;
+    /* Space below the text before the underline */
+}
+
+.cv-link:hover::after {
+    width: 100%;
+}
