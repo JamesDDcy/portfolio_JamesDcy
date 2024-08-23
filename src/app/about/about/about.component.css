@@ -1,24 +1,14 @@
-.about-me-img {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.337), 0 6px 20px rgba(0, 0, 0, 0.293);
-    border-radius: 0 0 50px 0;
-    /* Only round the lower right corner */
-
-}
-
 .cv-link {
     font-weight: 500;
     /* Equivalent to font-medium */
-    position: relative;
     display: inline-block;
-    text-decoration: none;
-    color: inherit;
 }
 
 .cv-link::after {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
+    height: 1px;
     background: currentColor;
     transition: width 0.5s;
     margin-top: 4px;
