@@ -1,2 +1,4 @@
 <app-navbar class=""></app-navbar>
-<router-outlet></router-outlet>
+<div [@routeTransition]="route.snapshot.data" style="display: contents">
+    <router-outlet></router-outlet>
+</div>
