@@ -2,6 +2,7 @@ import { Component, AfterViewInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import * as AOS from 'aos';
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
+import { request } from 'http';
 
 
 @Component({
@@ -23,6 +24,15 @@ export class AboutComponent implements AfterViewInit {
         offset: 0,  // Ensures animations trigger as soon as the element is in the viewport
       });
       AOS.refresh();
+
+      const filled = document.querySelector('.filled') as HTMLElement;
+      const update = () => {
+        if (filled) {
+          filled.style.width = `${((window.scrollY) / (document.body.scrollHeight - window.innerHeight)) * 100}%`;
+        }
+        requestAnimationFrame(update);
+      };
+      update();
     }
   }
 }
