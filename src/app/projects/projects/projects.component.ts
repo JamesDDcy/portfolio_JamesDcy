@@ -26,6 +26,14 @@ export class ProjectsComponent {
 
   projects: Project[] = [
     {
+      title: 'JEEPS 2.0',
+      tools: 'Flutter | Dart | Firebase',
+      description: 'An enhancement of JeePS, a realtime transportation tracking system for PUVs, which addresses factors affecting passenger satisfaction and service quality of jeepneys',
+      year: '2024-2025',
+      image: 'assets/images/jeeps.png',
+      textColor: 'text-lightblue',
+    },
+    {
       title: 'SUPERPOT',
       tools: 'C++ | Arduino IDE | TailwindCSS | Firebase',
       description: 'A Smart Greenhouse Enclosure System IoT project that uses Vercel and TailwindCSS for the web application, Arduino IDE for backend, and Firebase as the database system.',

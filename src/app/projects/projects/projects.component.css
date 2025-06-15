@@ -79,3 +79,13 @@ swiper-slide {
     color: rgb(192 38 211);
     /* Tailwind's fuchsia-600 color */
 }
+
+.text-lightblue {
+    color: rgb(147 197 253);
+    /* Tailwind's light-blue-400 color */
+}
+
+.text-lightblue:hover {
+    color: rgb(96 165 250);
+    /* Tailwind's light-blue-600 color */
+}
