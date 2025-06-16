@@ -5,7 +5,7 @@ import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { request } from 'http';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-
+import { trigger, transition, style, animate } from '@angular/animations';
 
 
 @Component({
@@ -14,7 +14,18 @@ import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
   imports: [CommonModule, FormsModule],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  animations: [
+    trigger('fadeModal', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class AboutComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }

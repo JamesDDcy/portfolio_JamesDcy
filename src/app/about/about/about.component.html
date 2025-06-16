@@ -241,7 +241,7 @@
 
     <!-- Send an email modal -->
     <ng-container *ngIf="sendEmailModalOpen">
-        <div class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+        <div @fadeModal class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
             <div class="modal-bg rounded-lg p-8 w-2/3 min-h-[200px] max-h-[77vh] overflow-y-auto relative">
                 <div *ngIf="emailStatus === 'success'" class="text-green-600 text-center mb-4">
                     Email sent successfully!

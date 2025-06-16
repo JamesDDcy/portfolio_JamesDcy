@@ -1,5 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-swiper-modal',
@@ -7,7 +8,18 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './swiper-modal.component.html',
   styleUrls: ['./swiper-modal.component.css'],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  animations: [
+    trigger('fadeModal', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('300ms ease', style({ opacity: 1 }))
+      ]),
+      transition(':leave', [
+        animate('300ms ease', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class SwiperModalComponent {
   @Input() selectedProjectTitle!: string; // Accepts the ID of the selected project
