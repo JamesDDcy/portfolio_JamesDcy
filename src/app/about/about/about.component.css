@@ -36,3 +36,24 @@ swiper-container {
     height: 100%;
     background: linear-gradient(90deg, rgb(13, 175, 216), rgb(0, 124, 155));
 }
+
+.modal-bg {
+    background: linear-gradient(180deg, rgba(122, 144, 180, 0.3) 0%, rgba(220, 220, 220, 0) 100%);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.337), 0 6px 20px rgba(0, 0, 0, 0.293);
+}
+
+.border-gray-300 {
+    border-color: #d1d5db;
+    /* Tailwind's gray-300 */
+}
+
+.border-green-300 {
+    border-color: #22c55e;
+    /* Tailwind's green-500 */
+}
+
+.border-red-300 {
+    border-color: #f87171;
+    /* Tailwind's red-500 */
+}
