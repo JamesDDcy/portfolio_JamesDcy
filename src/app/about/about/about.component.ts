@@ -19,11 +19,14 @@ export class AboutComponent implements AfterViewInit {
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init({
-        duration: 1200,
-        once: true,
-        offset: 0,  // Ensures animations trigger as soon as the element is in the viewport
+        duration: 500,
+        once: false,
+        offset: -400,  // Ensures animations trigger as soon as the element is in the viewport
       });
       AOS.refresh();
+
+      window.addEventListener('resize', () => AOS.refresh());
+      window.addEventListener('orientationchange', () => AOS.refresh());
 
       const filled = document.querySelector('.filled') as HTMLElement;
       const update = () => {
